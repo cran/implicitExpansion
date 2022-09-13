@@ -1,0 +1,16 @@
+b5cbadc2bb9ab481e2fec88a994b5cdd *DESCRIPTION
+cb6c6051696d98d8f8cfc66281b263db *LICENSE
+b2d8520f00ffa6947e0070916daf15b3 *NAMESPACE
+fdfe4de46a0065144a417eb2c8e679a2 *R/arrayCreation.R
+cddb5003e8ced9d1cbcab83cca9694a8 *R/binaryOperators.R
+d494058fcc7163f82a85164905a9de15 *R/implicitExpansion.R
+764ec5686d172c9b7a9f2466c0ae4943 *R/package.R
+3232e4334511990b73cd40d0778a95fb *R/rowColVectors.R
+d1a62bcb05ea2e5d8632f7adba909251 *R/util.R
+f2b7a736d8732e4d1fbe1033a11b12d2 *man/ArrayCreation.Rd
+fc2f9ea360fdfa56d52403e3db4ac952 *man/BinaryOperators.Rd
+9134b0e6d96505c936e593ce814a4f4b *man/RowAndColumnVectors.Rd
+fea883508b5bab61433909ecc22aa1aa *man/expandArray.Rd
+6b23dab09346841585f65a3e69ade7ab *man/expandedDim.Rd
+38d2ec976216c7eaafaebf4ec69de974 *man/implicitExpansion-package.Rd
+eea4e5fb987ca71be8a84e631f10375d *man/mmapply.Rd

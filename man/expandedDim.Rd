@@ -4,12 +4,14 @@
 \alias{expandedDim}
 \title{Implied Dimension of a set of Arrays}
 \usage{
-expandedDim(..., arrays = list())
+expandedDim(..., arrays = list(), allowRecycling = FALSE)
 }
 \arguments{
 \item{...}{Objects that are coerced to arrays.}
 
 \item{arrays}{A list of objects that are coerced to arrays.}
+
+\item{allowRecycling}{Whether to allow recycling of elements in each dimension.}
 }
 \value{
 A numberical vector containing the expanded dimension implied by the arrays.

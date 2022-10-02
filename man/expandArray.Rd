@@ -27,5 +27,5 @@ expandArray(x, c(3,4))
 
 }
 \seealso{
-\code{\link{expandedDim}}
+\code{\link{expandedDim}}, \code{\link{mmapply}}
 }

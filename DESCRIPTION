@@ -1,5 +1,5 @@
 Package: implicitExpansion
-Version: 0.0.1
+Version: 0.1.0
 Title: Array Operations for Arrays of Mismatching Sizes
 Description: Support for implicit expansion of arrays in operations involving
     arrays of mismatching sizes. This pattern is known as "broadcasting" in
@@ -18,8 +18,8 @@ Encoding: UTF-8
 RoxygenNote: 7.1.1
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2022-09-12 11:09:58 UTC; Manuel
+Packaged: 2022-10-02 22:39:06 UTC; Manuel
 Author: Manuel Hentschel [aut, cre]
 Maintainer: Manuel Hentschel <Manuel.Hentschel@unige.ch>
 Repository: CRAN
-Date/Publication: 2022-09-13 10:10:11 UTC
+Date/Publication: 2022-10-02 23:20:02 UTC

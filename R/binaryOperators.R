@@ -20,6 +20,8 @@
 #' cm <- t(colMeans(m))
 #' m %m-% cm
 #' 
+#' (1:3) %m>=% t(3:1)
+#' 
 #' @seealso 
 #' [`mmapply`]
 #' 
@@ -47,3 +49,59 @@
 `%m/%` <- function(x, y){
     mmapply(`/`, x, y)
 }
+
+#' @rdname BinaryOperators
+#' @export
+`%m^%` <- function(x, y){
+    mmapply(`^`, x, y)
+}
+
+#' @rdname BinaryOperators
+#' @export
+`%m==%` <- function(x, y){
+    mmapply(`==`, x, y)
+}
+
+#' @rdname BinaryOperators
+#' @export
+`%m!=%` <- function(x, y){
+    mmapply(`!=`, x, y)
+}
+
+#' @rdname BinaryOperators
+#' @export
+`%m>%` <- function(x, y){
+    mmapply(`>`, x, y)
+}
+
+#' @rdname BinaryOperators
+#' @export
+`%m<%` <- function(x, y){
+    mmapply(`<`, x, y)
+}
+
+#' @rdname BinaryOperators
+#' @export
+`%m>=%` <- function(x, y){
+    mmapply(`>=`, x, y)
+}
+
+#' @rdname BinaryOperators
+#' @export
+`%m<=%` <- function(x, y){
+    mmapply(`<=`, x, y)
+}
+
+#' @rdname BinaryOperators
+#' @export
+`%m|%` <- function(x, y){
+    mmapply(`|`, x, y)
+}
+
+#' @rdname BinaryOperators
+#' @export
+`%m&%` <- function(x, y){
+    mmapply(`&`, x, y)
+}
+
+

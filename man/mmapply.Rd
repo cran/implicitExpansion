@@ -4,16 +4,27 @@
 \alias{mmapply}
 \title{Apply a Function to Multiple Arrays with Implicit Expansion}
 \usage{
-mmapply(FUN, ..., SIMPLIFY = TRUE, USE.NAMES = TRUE)
+mmapply(
+  FUN,
+  ...,
+  MoreArgs = list(),
+  SIMPLIFY = TRUE,
+  USE.NAMES = TRUE,
+  ALLOW.RECYCLING = FALSE
+)
 }
 \arguments{
 \item{FUN}{Function to apply to each combination of arguments. Found via \code{\link{match.fun}}.}
 
 \item{...}{Objects that are coerced to arrays, expanded using implicit expansion, and then vectorized over.}
 
+\item{MoreArgs}{Pass arguments in a list instead of \code{...}}
+
 \item{SIMPLIFY}{If \code{TRUE}, the resulting list array is simplified to an atomic array if possible.}
 
 \item{USE.NAMES}{If \code{TRUE}, the dimensions are named using the names of input arguments of matching size.}
+
+\item{ALLOW.RECYCLING}{Whether to allow recycling of elements in each dimension.}
 }
 \value{
 An array containing the result of \code{FUN} for each combination of entries from \code{...} after implicit expansion.
@@ -22,13 +33,17 @@ An array containing the result of \code{FUN} for each combination of entries fro
 Similar function to \code{\link{mapply}} with support for implicit expansion.
 }
 \details{
-The arguments are handled in a similar fashion to \code{\link{mapply}} with some key differences:
+Most arguments are handled in a similar fashion to \code{\link{mapply}} with some key differences:
 \itemize{
-\item \code{MoreArgs} is omitted, since additional arguments can be passed in \code{...}, either as they are
+\item Entries of \code{MoreArgs} are treated the same as the ones in \code{...}, i.e.
+\code{mmapply(...)} is the same as \code{mmapply(MoreArgs = list(...))}.
+Additional arguments to FUN can be passed here or in \code{...}, either as they are
 (if they are atomic), or as a \code{list()} of length one.
 \item \code{SIMPLIFY} only simplifies a list array to an atomic array, nothing else.
 \item \code{USE.NAMES} uses names from all arguments, but never uses an argument itself as names.
 }
+
+If \code{ALLOW.RECYCLING} is set to \code{TRUE}, all arrays of any size are compatible.
 }
 \examples{
 summaries <- list(Max = max, Min = min, avg = mean)
